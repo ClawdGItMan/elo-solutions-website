@@ -1,22 +1,23 @@
 /**
- * Central site configuration.
- * The three values flagged below are placeholders carried over from the
- * design prototype — swap them for the real details before going live.
+ * Central site configuration. Every component reads names, contact details
+ * and outbound links from here so the site has a single source of truth.
  */
 export const site = {
   name: "Elo Solutions",
-  tagline: "Custom software for founders",
+  tagline: "Production software for founders, shipped by one person",
   description:
-    "Elo Solutions is a boutique AI & software studio that designs and ships production-grade apps for founders. Custom apps, AI features, crypto & web3, 0→1 products.",
+    "Elo Solutions is Max Allaire's one-person studio. It ships production software for founders and small businesses using AI-directed development: custom apps, AI features and 0→1 products, delivered in weeks.",
 
-  // TODO(confirm): real contact email for the "Book a call" links
-  email: "hello@elosolutions.com",
-  // TODO(confirm): real founder name shown in the About signature
-  founder: "Daniel Elo",
-  founderRole: "Founder & principal engineer",
-  // TODO(confirm): production domain (drives metadata + canonical URL)
-  domain: "elosolutions.com",
-  url: "https://elosolutions.com",
+  email: "max.allaire@gmail.com",
+  founder: "Max Allaire",
+  founderRole: "Founder",
+  domain: "elosolutions.org",
+  url: "https://elosolutions.org",
+
+  /** Max's portfolio; case studies live there under /work/<slug>. */
+  portfolioUrl: "https://maxallaire.com",
 } as const;
 
 export const mailto = `mailto:${site.email}`;
+
+export const caseStudyUrl = (slug: string) => `${site.portfolioUrl}/work/${slug}`;

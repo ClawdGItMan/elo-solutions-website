@@ -1,23 +1,23 @@
 const steps = [
   {
     n: "01",
-    title: "We start at the sharp edge.",
-    body: "One call to find the smallest version that proves the thing. We scope ruthlessly so we can move.",
+    title: "Start at the sharp edge.",
+    body: "One call to find the smallest version that proves the thing. I write a spec you can read in ten minutes, and we scope ruthlessly so we can move.",
   },
   {
     n: "02",
-    title: "We build in the open, weekly.",
-    body: "Working software every week — not status decks. You steer with your hands on the real thing.",
+    title: "Direct the agents, judge the outcome.",
+    body: "I don’t type the code by hand. AI coding agents build from the spec; I review what they produce by testing it like a user, not by reading diffs.",
   },
   {
     n: "03",
-    title: "Production from day one.",
-    body: "Typed, tested, deployed. No throwaway demos that have to be rebuilt before they can ship.",
+    title: "Working software, weekly.",
+    body: "You get a deployed URL every week — not a status deck. You steer with your hands on the real thing, and production is the default from the first commit.",
   },
   {
     n: "04",
-    title: "We hand you the keys.",
-    body: "A clean, documented codebase that’s yours. Keep us on, or take it in-house — no lock-in.",
+    title: "You keep the keys.",
+    body: "A clean, tested, documented codebase in your own GitHub and hosting accounts. Keep me on, or take it in-house — no lock-in.",
   },
 ];
 
@@ -27,14 +27,14 @@ export function Process() {
       <div className="wrap proc__grid">
         <div className="proc__intro reveal">
           <span className="eyebrow eyebrow--plain section-label">
-            03 — How we work
+            03 — How I work
           </span>
           <h2 className="h-sec" style={{ marginTop: "18px" }}>
-            Opinionated, on purpose.
+            AI-directed, on purpose.
           </h2>
           <p className="prose" style={{ marginTop: "20px", maxWidth: "34ch" }}>
-            A way of working that trades meetings for momentum. You’ll see real
-            software, weekly, from the first week.
+            One person with a fleet of coding agents ships what used to take a
+            small team. The method is the product: spec, plan, build, verify.
           </p>
         </div>
         <div className="proc__steps reveal-stagger">

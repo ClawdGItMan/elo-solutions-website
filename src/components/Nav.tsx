@@ -13,7 +13,7 @@ export function Nav() {
             Work
           </a>
           <a className="navlink" href="#process">
-            How we work
+            How I work
           </a>
           <a className="navlink" href="#about">
             About

@@ -1,18 +1,32 @@
+import { projects } from "./projects";
+
 export function Hero() {
   return (
     <section className="hero wrap">
+      <div className="hero__backdrop" aria-hidden="true" />
       <div className="hero__grid">
         <div className="hero__lead">
-          <p className="eyebrow reveal">Boutique AI &amp; software studio</p>
-          <h1 className="hero__headline reveal">
-            We build the software you <span className="em">can’t buy.</span>
-          </h1>
-          <p className="hero__sub lede reveal">
-            Elo is a studio that designs and ships production-grade apps for
-            founders — AI features, custom SaaS, and 0→1 products. Built fast.
-            Built to keep.
+          <p className="eyebrow hero__in" style={{ "--i": 0 } as React.CSSProperties}>
+            A one-person software studio
           </p>
-          <div className="hero__ctas reveal">
+          <h1 className="hero__headline">
+            <span className="hero__line hero__in" style={{ "--i": 1 } as React.CSSProperties}>
+              Software you’d hire
+            </span>
+            <span className="hero__line hero__in" style={{ "--i": 2 } as React.CSSProperties}>
+              a team for.
+            </span>
+            <span className="hero__line hero__in" style={{ "--i": 3 } as React.CSSProperties}>
+              <span className="em">Shipped by one.</span>
+            </span>
+          </h1>
+          <p className="hero__sub lede hero__in" style={{ "--i": 4 } as React.CSSProperties}>
+            Elo Solutions is Max Allaire’s studio. I spec the product, direct
+            AI coding agents to build it, test what comes back, and ship it to
+            production — for founders and small businesses who need real
+            software, not a roadmap.
+          </p>
+          <div className="hero__ctas hero__in" style={{ "--i": 5 } as React.CSSProperties}>
             <a className="btn btn--primary" href="#contact">
               Book a call{" "}
               <span className="arrow" aria-hidden="true">
@@ -25,40 +39,31 @@ export function Hero() {
           </div>
         </div>
 
-        <aside className="hero__aside reveal">
-          <span className="section-label">Selected work</span>
-          <ul className="workindex">
-            <li>
-              <a href="#case-hearth">
-                <span className="wi-name">Hearth</span>
-                <span className="wi-meta">family OS · 2025</span>
-              </a>
-            </li>
-            <li>
-              <a href="#case-personal-os">
-                <span className="wi-name">Personal OS</span>
-                <span className="wi-meta">knowledge · 2025</span>
-              </a>
-            </li>
-            <li>
-              <a href="#case-crypto-leads">
-                <span className="wi-name">Crypto Leads</span>
-                <span className="wi-meta">on-chain · 2024</span>
-              </a>
-            </li>
-          </ul>
+        <aside className="hero__aside hero__in" style={{ "--i": 3 } as React.CSSProperties}>
+          <span className="section-label">Selected work · 2026</span>
+          <ol className="workindex">
+            {projects.map((p, i) => (
+              <li key={p.slug}>
+                <a href={`#case-${p.slug}`}>
+                  <span className="wi-num">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="wi-name">{p.name}</span>
+                  <span className="wi-meta">{p.kind}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
         </aside>
       </div>
 
-      <div className="hero__meta reveal">
+      <div className="hero__meta hero__in" style={{ "--i": 6 } as React.CSSProperties}>
         <span className="avail">
           <span className="dot" />
           Taking 2 new projects this quarter
         </span>
         <span className="sep">·</span>
-        <span>Solo-founder-led, studio-grade output</span>
+        <span>One person, AI-directed, production-grade</span>
         <span className="sep">·</span>
-        <span>Design → ship in weeks, not quarters</span>
+        <span>Spec → ship in weeks, not quarters</span>
       </div>
     </section>
   );

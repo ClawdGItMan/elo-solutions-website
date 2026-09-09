@@ -11,11 +11,14 @@ export function Footer() {
         </a>
         <div className="foot__links">
           <a href="#work">Work</a>
-          <a href="#process">How we work</a>
+          <a href="#process">How I work</a>
           <a href="#about">About</a>
+          <a href={site.portfolioUrl}>maxallaire.com</a>
           <a href={mailto}>Contact</a>
         </div>
-        <div className="foot__copy">© 2026 {site.name} · built by Elo</div>
+        <div className="foot__copy">
+          © 2026 {site.name} · {site.founder} · {site.domain}
+        </div>
       </div>
     </footer>
   );

@@ -1,5 +1,6 @@
-/** A scoped, authentic recreation of the Hearth product UI, rendered inside
- *  the Hearth case-study browser frame. Styles live in globals.css (.hearth-mock). */
+/** A scoped recreation of the Hearth product UI with placeholder data (no real
+ *  household details). Rendered inside the Hearth case-study browser frame.
+ *  Styles live in globals.css (.hearth-mock). */
 export function HearthMock() {
   return (
     <div className="hearth-mock">
@@ -38,19 +39,19 @@ export function HearthMock() {
         <div className="spacer" />
         <div className="hm-avatar">
           <span className="av" />
-          <small>The Reyes family</small>
+          <small>Household · admin</small>
         </div>
       </div>
 
       <div className="hm-canvas">
-        <div className="hm-eyebrow">Tuesday · March 14</div>
+        <div className="hm-eyebrow">Tuesday · June 9</div>
         <div className="hm-greet">
-          Good morning, <i>Jason.</i>
+          Good morning, <i>Sam.</i>
         </div>
         <div className="hm-sectitle">Today</div>
         <div className="hm-task done">
           <span className="hm-check" />
-          <span className="t">School run — Ella</span>
+          <span className="t">School run · both kids</span>
           <span className="meta">7:50</span>
         </div>
         <div className="hm-task">
@@ -60,7 +61,7 @@ export function HearthMock() {
         </div>
         <div className="hm-task">
           <span className="hm-check" />
-          <span className="t">Reply to Jack’s coach</span>
+          <span className="t">Confirm nanny’s hours</span>
           <span className="meta">in 20 min</span>
         </div>
         <div className="hm-cards">
@@ -70,7 +71,7 @@ export function HearthMock() {
           </div>
           <div className="hm-card kid">
             <div className="lab">Kids</div>
-            <div className="big">Ella pickup · 3:15</div>
+            <div className="big">Pickup · 3:15</div>
           </div>
         </div>
       </div>
