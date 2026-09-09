@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elo Solutions — elosolutions.org
 
-## Getting Started
+Marketing site for **Elo Solutions**, Max Allaire's one-person software studio. Elo ships production software for founders and small businesses using AI-directed development: Max writes the spec, directs AI coding agents to build it, tests the result like a user, and ships it.
 
-First, run the development server:
+Live at **https://elosolutions.org**. Full case studies for the work shown here live on Max's portfolio at https://maxallaire.com/work.
+
+## What's on the page
+
+A single, scroll-through landing page:
+
+- **Hero** — positioning and an index of the four featured projects
+- **What I do** — custom apps, AI features, crypto/web3, 0→1 builds
+- **Selected work** — Hearth (a family operations platform for a staffed household, anonymised), Marathon Training App, Personal OS, Leads CRM. Each links to its case study on maxallaire.com.
+- **How I work** — the spec → agents → verify → ship method
+- **About** and **Contact**
+
+The Hearth case is rendered as a live CSS mock with placeholder data only; the client's details are not on the site. The other three project frames are abstract CSS renderings, not screenshots.
+
+## Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router) + React 19, TypeScript strict
+- Plain CSS with design tokens in `src/app/globals.css` (no Tailwind)
+- Fonts via `next/font`: Schibsted Grotesk (display), Hanken Grotesk (body), JetBrains Mono, plus Newsreader/Manrope for the Hearth mock
+- Hosted on Vercel; no database, no auth, no environment variables
+
+Site-wide details (name, contact email, domain, portfolio URL) live in `src/lib/site.ts`. The four projects are defined in `src/components/projects.ts`.
+
+## Running it locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev        # http://localhost:3000
+pnpm build      # production build
+pnpm lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploying
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The Vercel project is `elo-solutions` on the `maxallaire-1603s-projects` team, with `elosolutions.org` attached.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+vercel --prod
+```
